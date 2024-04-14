@@ -1,0 +1,272 @@
+@font-face {
+    font-family: Aileron-ExtraLight;
+    src: url(font/Aileron-UltraLight.otf);
+}
+@font-face {
+    font-family: Aileron-Light;
+    src: url(font/Aileron-Light.otf);
+}
+
+body {
+    background: #F6EEDB;
+}
+.justify-content-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    margin: 0;
+}
+.nav-bar {
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    padding-top: 0.5vh;
+    background-color: #68B7CB;
+}
+.logo {
+    width: 6vw;
+    height: 5vw;
+    margin-right: 1vw;
+    margin-left: 0.1vw;
+}
+.website-name {
+    font-family: Poppins;
+    font-size: 4vw;
+    font-weight: 700;
+    color: #F1E7CE;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.14vh;
+    text-shadow: 0.3vw 0px 1px #1E4964;
+}
+#search-icon-alignment-div {
+    width: 100%;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.search-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    text-align: right;
+    float: right;
+}
+#hover-search-icon, #search-icon-div:hover #default-search-icon{
+    display:none
+}
+#default-search-icon, #search-icon-div:hover #hover-search-icon{
+   display:block
+}
+.underline-textarea {
+    border: none;
+    border-bottom: 5px solid black;
+    padding: 5px;
+    height: 10px;
+    box-sizing: border-box;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 1vw;
+    margin-right: 5vw;
+}
+
+.search-container textarea {
+    flex: 1;
+    height: 3vw; /* Adjust the height as needed */
+    font-size: 2vw;
+    box-sizing: border-box;
+    background-color: #68B7CB;
+    border: none;
+    border-bottom: 0.2vw solid black;
+    outline: none;
+    resize: none;
+}
+
+.search-container button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.nav-button {
+    font-family: Poppins;
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    background-color: #68B7CB;
+    border: none;
+    border-radius: 0;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    transition: 150ms;
+}
+.nav-button:hover {
+    color: black;
+    background-color: #CCEFF9;
+}
+.nav-button:active {
+    color: white;
+    background-color: #1E4964;
+}
+.user-post-gui-wrapper {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.user-post-gui img {
+    border-radius: 9999999999999999999999999999px;
+}
+.user-post-wrapper {
+    max-width: 80%;
+}
+.user-post {
+    background-color: white;
+}
+.user-post img {
+    border-radius: 9999999999999999999999999999px;
+    margin-left: 2vw;
+    margin-top: 2vw; 
+}
+.user-post-gui-pfp-big, .user-post-poster-pfp-big{
+    width: 15vh;
+}
+.user-post-gui-pfp-medandbelow, .user-post-poster-pfp-medandbelow{
+    width: 15vw;
+}
+.user-post-gui button {
+    background-color: white;
+    font-family: Poppins;
+    color: #898989;
+    border: 2px solid black;
+    transition: 150ms;
+}
+.user-post-gui-button-big {
+    font-size: 4vh;
+    height: 6.5vh;
+    width: 80vh;
+    margin-left: 2vh;
+    border-radius: 10vh;
+}
+.user-post-gui-button-medandbelow {
+    font-size: 3vw;
+    height: 7vw;
+    width: 60vw;
+    margin-left: 2vw;
+    border-radius: 10vw;
+}
+.user-post-gui button:hover {
+    background-color: #707070;
+    border: 2px solid white;
+    color: white;
+}
+.poster-username-medandbelow {
+    font-family: Poppins;
+    font-size: 3vh;
+    font-weight: 700;
+    margin: 0;
+}
+.poster-username-big {
+    font-family: Poppins;
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 0;
+}
+.user-post-content-big {
+    font-family: Aileron-ExtraLight;
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin-left: 3vw;
+    width: 90%;
+}
+.user-post-content-medandbelow {
+    font-family: Aileron-ExtraLight;
+    font-size: 2.5vh;
+    font-weight: 700;
+    padding-left: 5vw;
+    width: 90%;
+}
+.user-post button {
+    margin: 0;
+}
+.post-button-big {
+    font-family: Aileron-ExtraLight;
+    font-size: 2.5vh;
+    font-weight: 700;
+    color: #898989;
+    background-color: white;
+    border: none;
+    transition: 150ms;
+}
+.post-button-medandbelow {
+    font-family: Aileron-ExtraLight;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #898989;
+    background-color: white;
+    border: none;
+    transition: 150ms;
+}
+.post-button-big:hover {
+    color: black;
+}   
+.post-button-medandbelow:hover {
+    color: black;
+}
+
+.user-post-replies {
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: white;
+}
+.reply-pfp-big {
+    font-family: Poppins;
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 0;
+}
+.reply-pfp-medandbelow {
+    width: 8vw;
+    border-radius: 999999999px;
+    margin-left: 2vw;
+    margin-top: 2vw; 
+}
+.reply-pfp-big {
+    width: 8vh;
+    border-radius: 999999999px;
+    margin-left: 1vw;
+    margin-top: 1vw; 
+}
+.reply-username-medandbelow {
+    font-family: Poppins;
+    font-size: 2vh;
+    font-weight: 700;
+    margin: 0;
+}
+.reply-username-big {
+    font-family: Poppins;
+    font-size: 3vh;
+    font-weight: 700;
+    margin: 0;
+}
+.reply-content-big {
+    font-family: Aileron-ExtraLight;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin-left: 1vw;
+    width: 90%;
+}
+.reply-content-medandbelow {
+    font-family: Aileron-ExtraLight;
+    font-size: 2.5vh;
+    font-weight: 700;
+    padding-left: 5vw;
+    width: 90%;
+}

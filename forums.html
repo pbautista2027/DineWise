@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="forums.css" rel="stylesheet">
+        <script src="forums.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>DineWise - Forums</title>
+    </head>
+    <body>
+        <div class="jumbotron nav-bar sticky-top">
+            <div class="d-flex">
+                <img src="images/logo.png" alt="" class="logo">
+                <p class="website-name">DineWise</p>
+                <div id="search-icon-alignment-div"><div id="search-icon-div" onclick="search()"><img src="images/search-icon.webp" alt="" class="search-icon text-end" id="default-search-icon"><img src="images/search-icon-hover.webp" alt="" class="search-icon text-end" id="hover-search-icon"></div></div>
+                <div class="search-container">
+                    <textarea id="searchInput" placeholder="Search..."></textarea>
+                </div>
+            </div>
+            <div class="nav-buttons-main">
+                <div class="row justify-content-center">
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoIndex()">Home</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoSupplier()">Suppliers</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoTutorials()">Tutorials</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoSafetyGuidelines()">Safety Guidelines</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" style="background-color: #CCEFF9;">Forum</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-post-gui-wrapper">
+            <div class="user-post-gui d-flex justify-content-center align-items-center">
+                <img src="images/mew.png" class="d-none d-lg-block user-post-gui-pfp-big" alt="">
+                <img src="images/mew.png" class="d-md-block d-lg-none user-post-gui-pfp-medandbelow" alt="">
+                <!-- Visible on medium screens and above -->
+                <button type="button" onclick="showPostGui()" class="d-none d-lg-block user-post-gui-button-big">What question would you like to ask?</button>
+                <!-- Hidden on medium screens and below -->
+                <button type="button" onclick="showPostGui()" class="d-md-block d-lg-none user-post-gui-button-medandbelow">What question would you like to ask?</button>
+            </div>
+        </div>
+        <div class="user-post-wrapper justify-content-center">
+            <div class="user-post d-flex text-start">
+                <div>
+                    <img src="images/mog.png" class="d-none d-lg-block user-post-poster-pfp-big" alt="">
+                    <img src="images/mog.png" class="d-md-block d-lg-none user-post-poster-pfp-medandbelow" alt="">
+                </div>
+                <div>
+                    <p class="d-none d-lg-block poster-username-big">XxCoolBoixX</p>
+                    <p class="d-md-block d-lg-none poster-username-medandbelow">XxCoolBoixX</p>
+                    <p class="d-none d-lg-block user-post-content-big">I am lactose intolerant and ate chocolate cake. I got stomach problems right after. Should I sue the restaurant that served me chocolate cake?</p>
+                    <p class="d-md-block d-lg-none user-post-content-medandbelow">I am lactose intolerant and ate chocolate cake. I got stomach problems right after. Should I sue the restaurant that served me chocolate cake?</p>
+                    <div class="d-flex">
+                        <button type="button" style="margin-left: 3vw;" class="d-none d-lg-block post-button-big" id="reply-button-big" onclick="replyVisiblityAction('big')">View replies</button>
+                        <button type="button" class="d-none d-lg-block post-button-big">Upvote</button>
+                        <button type="button" class="d-none d-lg-block post-button-big">Downvote</button>
+                        <button type="button" class="d-none d-lg-block post-button-big">Report</button>
+                        <button type="button" class="d-md-block d-lg-none post-button-medandbelow" id="reply-button-medandbelow" onclick="replyVisiblityAction('md')">View replies</button>
+                        <button type="button" class="d-md-block d-lg-none post-button-medandbelow">Upvote</button>
+                        <button type="button" class="d-md-block d-lg-none post-button-medandbelow">Downvote</button>
+                        <button type="button" class="d-md-block d-lg-none post-button-medandbelow">Report</button>
+                    </div>
+                </div>
+            </div>
+            <div class="user-post-replies d-flex text-start d-none">
+                <div>
+                    <img src="images/gay.png" class="d-none d-lg-block reply-pfp-big" alt="">
+                    <img src="images/gay.png" class="d-md-block d-lg-none reply-pfp-medandbelow" alt="">
+                </div>
+                <div>
+                    <p class="d-none d-lg-block reply-username-big">PrincessUnicorn_1011</p>
+                    <p class="d-md-block d-lg-none reply-username-medandbelow">PrincessUnicorn_1011</p>
+                    <p class="d-none d-lg-block reply-content-big">Are you intoxicated? Do you have a brain in your skull? Of course not! Hope this helps! ❤️</p>
+                    <p class="d-md-block d-lg-none reply-content-medandbelow">Are you intoxicated? Do you have a brain in your skull? Of course not! Hope this helps! ❤️</p>
+                </div>
+            </div>
+            <div class="user-post-replies d-flex text-start d-none">
+                <div>
+                    <img src="images/drake.png" class="d-none d-lg-block reply-pfp-big" alt="">
+                    <img src="images/drake.png" class="d-md-block d-lg-none reply-pfp-medandbelow" alt="">
+                </div>
+                <div>
+                    <p class="d-none d-lg-block reply-username-big">Champagne Papi</p>
+                    <p class="d-md-block d-lg-none reply-username-medandbelow">Champagne Papi</p>
+                    <p class="d-none d-lg-block reply-content-big">you ****** *******, everyone knows that u cant consume any dairy products if you are lactose intolerant, so dont ******* eat no chocolate cake - sincerely Champagne Papi</p>
+                    <p class="d-md-block d-lg-none reply-content-medandbelow">you ****** *******, everyone knows that u cant consume any dairy products if you are lactose intolerant, so dont ******* eat no chocolate cake - sincerely Champagne Papi</p>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </body>
+</html>

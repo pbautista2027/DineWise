@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="safety_guidelines.css" rel="stylesheet">
+        <script src="safety_guidelines.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>DineWise - Safety Guidelines</title>
+    </head>
+    <body>
+        <div class="jumbotron nav-bar sticky-top">
+            <div class="d-flex">
+                <img src="images/logo.png" alt="" class="logo">
+                <p class="website-name">DineWise</p>
+                <div id="search-icon-alignment-div"><div id="search-icon-div" onclick="search()"><img src="images/search-icon.webp" alt="" class="search-icon text-end" id="default-search-icon"><img src="images/search-icon-hover.webp" alt="" class="search-icon text-end" id="hover-search-icon"></div></div>
+                <div class="search-container">
+                    <textarea id="searchInput" placeholder="Search..."></textarea>
+                </div>
+            </div>
+            <div class="nav-buttons-main">
+                <div class="row justify-content-center">
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoIndex()">Home</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoSupplier()">Suppliers</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoTutorials()">Tutorials</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" style="background-color: #CCEFF9;">Safety Guidelines</button>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="nav-button" onclick="gotoForums()">Forum</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recommended-guides-main-wrapper d-flex text-start">
+            <div class="recommended-guides-wrapper">
+                <p class="d-none d-lg-block recommended-guides-title-big">GUIDELINES</p>
+                <p class="d-md-block d-lg-none recommended-guides-title-medandbelow">GUIDELINES</p>
+                <div class="user-post d-flex text-start">
+                    <div>
+                        <img src="images/mog.png" class="d-none d-lg-block user-post-pfp-big" alt="">
+                        <img src="images/mog.png" class="d-md-block d-lg-none user-post-pfp-medandbelow" alt="">
+                    </div>
+                    <div>
+                        <p class="d-none d-lg-block poster-username-big">XxCoolBoixX </p>
+                        <p class="d-md-block d-lg-none poster-username-medandbelow">XxCoolBoixX </p>
+                        <p class="d-none d-lg-block user-post-content-big">HOW TO AVOID POISONING YOURSELF AND YOUR FAMILY.</p>
+                        <p class="d-md-block d-lg-none user-post-content-medandbelow">HOW TO AVOID POISONING YOURSELF AND YOUR FAMILY.</p>
+                        <div class="d-flex">
+                            <button type="button" class="d-none d-lg-block recommended-button-big">Recommended</button>
+                            <button type="button" class="d-md-block d-lg-none recommended-button-medandbelow">Recommended</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-post d-flex text-start">
+                    <div>
+                        <img src="images/mew.png" class="d-none d-lg-block user-post-pfp-big" alt="">
+                        <img src="images/mew.png" class="d-md-block d-lg-none user-post-pfp-medandbelow" alt="">
+                    </div>
+                    <div>
+                        <p class="d-none d-lg-block poster-username-big">XxBadBoyxX </p>
+                        <p class="d-md-block d-lg-none poster-username-medandbelow">XxBadBoyxX </p>
+                        <p class="d-none d-lg-block user-post-content-big">BASIC KITCHEN KNOWLEDGE (FOR BEGINNERS)</p>
+                        <p class="d-md-block d-lg-none user-post-content-medandbelow">BASIC KITCHEN KNOWLEDGE (FOR BEGINNERS)</p>
+                        <div class="d-flex">
+                            <button type="button" class="d-none d-lg-block recommended-button-big">Recommended</button>
+                            <button type="button" class="d-md-block d-lg-none recommended-button-medandbelow">Recommended</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-post d-flex text-start">
+                    <div>
+                        <img src="images/gay.png" class="d-none d-lg-block user-post-pfp-big" alt="">
+                        <img src="images/gay.png" class="d-md-block d-lg-none user-post-pfp-medandbelow" alt="">
+                    </div>
+                    <div>
+                        <p class="d-none d-lg-block poster-username-big">PrincessUnicorn_1011 </p>
+                        <p class="d-md-block d-lg-none poster-username-medandbelow">PrincessUnicorn_1011 </p>
+                        <p class="d-none d-lg-block user-post-content-big">HOW TO KEEP YOUR KITCHEN CLEAN</p>
+                        <p class="d-md-block d-lg-none user-post-content-medandbelow">HOW TO KEEP YOUR KITCHEN CLEAN</p>
+                        <div class="d-flex">
+                            <button type="button" class="d-none d-lg-block recommended-button-big">Recommended</button>
+                            <button type="button" class="d-md-block d-lg-none recommended-button-medandbelow">Recommended</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-post d-flex text-start">
+                    <div>
+                        <img src="images/drake.png" class="d-none d-lg-block user-post-pfp-big" alt="">
+                        <img src="images/drake.png" class="d-md-block d-lg-none user-post-pfp-medandbelow" alt="">
+                    </div>
+                    <div>
+                        <p class="d-none d-lg-block poster-username-big">Champagne Papi </p>
+                        <p class="d-md-block d-lg-none poster-username-medandbelow">Champagne Papi </p>
+                        <p class="d-none d-lg-block user-post-content-big">HOW TO HANDLE RODENT CORPSES IN THE KITCHEN</p>
+                        <p class="d-md-block d-lg-none user-post-content-medandbelow">HOW TO HANDLE RODENT CORPSES IN THE KITCHEN</p>
+                        <div class="d-flex">
+                            <button type="button" class="d-none d-lg-block recommended-button-big">Recommended</button>
+                            <button type="button" class="d-md-block d-lg-none recommended-button-medandbelow">Recommended</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-lg-block ad-wrapper text-center">
+                <div class="ad-info-wrapper align-ads-center">
+                    <p class="ad-name">ADVERTISEMENT.</p>
+                    <img class="ad-image" src="images/smile.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-md-block d-lg-none ad-wrapper-small text-center">
+            <br>
+            <div class="ad-info-wrapper align-ads-center">
+                <p class="ad-name">ADVERTISEMENT.</p>
+                <img class="ad-image" src="images/smile.png" alt="">
+            </div>
+        </div>
+        <br><br><br><br>
+    </body>
+</html>
